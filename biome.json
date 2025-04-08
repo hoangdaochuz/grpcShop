@@ -1,0 +1,137 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": false
+    },
+    "files": {
+        "ignoreUnknown": false,
+        "ignore": []
+    },
+    "formatter": {
+        "enabled": true,
+        "useEditorconfig": true,
+        "formatWithErrors": false,
+        "indentStyle": "space",
+        "indentWidth": 2,
+        "lineEnding": "lf",
+        "lineWidth": 80,
+        "attributePosition": "auto",
+        "bracketSpacing": true
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": false,
+            "a11y": {
+                "noBlankTarget": "error"
+            },
+            "correctness": {
+                "noChildrenProp": "error",
+                "noInvalidUseBeforeDeclaration": "error",
+                "noUnusedVariables": "warn",
+                "useExhaustiveDependencies": "off",
+                "useHookAtTopLevel": "error",
+                "useJsxKeyInIterable": "error"
+            },
+            "security": {
+                "noDangerouslySetInnerHtmlWithChildren": "error"
+            },
+            "style": {
+                "useBlockStatements": "off",
+                "useConsistentArrayType": {
+                    "level": "warn",
+                    "options": {
+                        "syntax": "shorthand"
+                    }
+                }
+            },
+            "suspicious": {
+                "noCommentText": "error",
+                "noConsole": {
+                    "level": "error",
+                    "options": {
+                        "allow": [
+                            "warn",
+                            "error"
+                        ]
+                    }
+                },
+                "noDuplicateJsxProps": "error",
+                "noExplicitAny": "off"
+            }
+        },
+        "ignore": [
+            "**/node_modules",
+            "**/dist",
+            "**/build",
+            "**/release",
+            "**/.next",
+            "**/.DS_Store",
+            "**/.cache-loader",
+            "**/.rollup.cache",
+            "**/public"
+        ]
+    },
+    "javascript": {
+        "formatter": {
+            "jsxQuoteStyle": "double",
+            "quoteProperties": "asNeeded",
+            "trailingCommas": "es5",
+            "semicolons": "always",
+            "arrowParentheses": "always",
+            "bracketSameLine": false,
+            "quoteStyle": "single",
+            "attributePosition": "auto",
+            "bracketSpacing": true
+        },
+        "globals": [
+            "jest",
+            "describe",
+            "expect",
+            "test"
+        ]
+    },
+    "overrides": [
+        {
+            "include": [
+                "*.ts",
+                "*.tsx"
+            ],
+            "linter": {
+                "rules": {
+                    "correctness": {
+                        "noConstAssign": "off",
+                        "noGlobalObjectCalls": "off",
+                        "noInvalidConstructorSuper": "off",
+                        "noNewSymbol": "off",
+                        "noSetterReturn": "off",
+                        "noUndeclaredVariables": "off",
+                        "noUnreachable": "off",
+                        "noUnreachableSuper": "off"
+                    },
+                    "style": {
+                        "noArguments": "error",
+                        "noVar": "error",
+                        "useConst": "warn"
+                    },
+                    "suspicious": {
+                        "noDuplicateClassMembers": "off",
+                        "noDuplicateObjectKeys": "off",
+                        "noDuplicateParameters": "off",
+                        "noFunctionAssign": "off",
+                        "noImportAssign": "off",
+                        "noRedeclare": "off",
+                        "noUnsafeNegation": "off",
+                        "useGetterReturn": "off",
+                        "useValidTypeof": "off"
+                    }
+                }
+            }
+        }
+    ]
+}
